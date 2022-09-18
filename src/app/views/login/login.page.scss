@@ -1,0 +1,47 @@
+ion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 158px;
+}
+
+ion-input {
+  border-bottom: 1px solid #B0BBC2 ;
+  width: 290px;
+  margin-top: 21px;
+  margin-bottom: 7px;
+  --padding-top: 2px;
+  --padding-bottom: 5px;
+}
+
+ion-item {
+  --border-width: 0 0 0 0;
+  --highlight-color-focused:#4556F2; 
+}
+
+ion-input.login-input-email {
+  border-bottom: 1px solid #B0BBC2;
+  width: 290px;
+  margin-bottom: 7px;
+  --padding-top: 100px;
+}
+
+
+ion-button.button-eye {
+  --background: transparent;
+  --box-shadow: none;
+  --transform: none;
+  margin-bottom: -6px;
+  margin-right: 20px;
+}
+
+
+ion-button.login-button--login {
+  margin-top: 67px;
+  text-transform: unset;
+  --border-radius: 7px;
+  --box-shadow: 1px 6px 20px 8px rgba(0, 0, 0, 0.1);
+}
