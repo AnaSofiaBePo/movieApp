@@ -5,9 +5,14 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'tabs',
     component: TabsPage,
     children: [
+      {
+        path: '',
+        redirectTo: 'tabs/home',
+        pathMatch: 'full'
+      },
       {
         path: 'favorites',
         loadChildren: () => import('../../views/favorites/favorites.module').then(m => m.FavoritesPageModule)
@@ -19,7 +24,7 @@ const routes: Routes = [
       {
         path: 'search',
         loadChildren: () => import('../../views/search/search.module').then(m => m.SearchPageModule)
-      }
+      },
     ]
   }
 ];

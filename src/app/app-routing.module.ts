@@ -4,11 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'tabs',
+    redirectTo: 'tabs/home',
     pathMatch: 'full'
   },
   {
-    path: 'tabs',
+    path: '',
     loadChildren: () => import('./views/tabs/tabs.module').then( m => m.TabsPageModule)
   },
 
