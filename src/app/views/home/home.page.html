@@ -1,9 +1,38 @@
 <ion-content>
-  <swiper [config]="config">
-    <ng-template swiperSlide *ngFor="let movie of recentMovies">
-      <ion-card>
-        <img class="swiper-lazy" [src]="movie.backdrop_path | image" />
-      </ion-card>
-    </ng-template>
-  </swiper>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>
+          The new
+        </h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slides-show-backdrop [recentMovies]="recentMovies"></app-slides-show-backdrop>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>
+         Populars
+        </h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slides-show-poster [posterMovies]="popularis"></app-slides-show-poster>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>
+         What people see
+        </h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slides-show-backdrop [recentMovies]="trending"></app-slides-show-backdrop>
+
 </ion-content>
