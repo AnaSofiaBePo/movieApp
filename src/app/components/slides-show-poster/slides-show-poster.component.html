@@ -1,0 +1,8 @@
+<swiper [config]="config">
+  <ng-template swiperSlide *ngFor="let movie of posterMovies">
+    <ion-card>
+      <img class="swiper-lazy poster" [src]="movie.poster_path
+      | image" />
+    </ion-card>
+  </ng-template>
+</swiper>

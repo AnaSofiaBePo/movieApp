@@ -1,0 +1,42 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3 class="ion-padding-horizontal">The new</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slides-show-backdrop
+    [recentMovies]="recentMovies"
+  ></app-slides-show-backdrop>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3 class="ion-padding-horizontal">
+          Populars
+          <ion-icon
+            class="popular-heart"
+            slot="icon-only"
+            name="heart"
+          ></ion-icon>
+        </h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slides-show-poster [posterMovies]="popularis"></app-slides-show-poster>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3 class="ion-padding-horizontal">What people see</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-slides-show-poster
+    [posterMovies]="trending"
+  ></app-slides-show-poster>
+</ion-content>
