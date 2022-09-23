@@ -30,19 +30,24 @@ export class HomePage implements OnInit {
   recentMovies: Movie[] = [];
   popularis: Movie[] = [];
   trending: Movie[] = [];
+  upcoming: Movie[] = [];
   constructor(private movieServices: MoviesService) {}
 
   ngOnInit() {
     this.movieServices.getFeatures().subscribe((res) => {
       this.recentMovies = res.results;
+    });
 
-      this.movieServices.getPopular().subscribe((popular) => {
-        this.popularis = popular.results;
-      });
+    this.movieServices.getPopular().subscribe((popular) => {
+      this.popularis = popular.results;
+    });
 
-      this.movieServices.getPopular().subscribe((trend) => {
-        this.trending = trend.results;
-      });
+    this.movieServices.getTrending().subscribe((trend) => {
+      this.trending = trend.results;
+    });
+
+    this.movieServices.getUpcoming().subscribe((upcoming) => {
+      this.upcoming = upcoming.results;
     });
   }
 }

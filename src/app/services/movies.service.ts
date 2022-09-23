@@ -28,7 +28,14 @@ export class MoviesService {
 
   getTrending() {
 
-    const query = 'trending/all/day?';
+    const query = '/trending/all/day?';
+
+    return this.executeQuery<responseMDB>(query);
+  }
+
+  getUpcoming() {
+
+    const query = '/movie/upcoming?';
 
     return this.executeQuery<responseMDB>(query);
   }

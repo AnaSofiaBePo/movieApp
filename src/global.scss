@@ -33,12 +33,35 @@
 @import '~swiper/scss/scrollbar';
 @import '~swiper/scss/zoom';
 @import '~@ionic/angular/css/ionic-swiper';
+@import' ~swiper/scss/grid';
 
 ion-content {
     --background: rgb(12, 13, 20);
 }
 
-img .poster {
-    width: 110px !important;
-    height: 160px !important;
+img.poster {
+    width: 160px !important;
+    height: 220px !important;
+}
+
+.swiper-grid-column > .swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+height: 100%;
+}
+
+swiper.grid-peers {
+    .swiper-slide {
+        display: flex !important;
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        height: calc((100% - 65px) / 2) !important;
+    }
 }
