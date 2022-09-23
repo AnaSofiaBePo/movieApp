@@ -1,0 +1,9 @@
+
+
+<swiper [config]="config">
+  <ng-template swiperSlide *ngFor="let movie of recentMovies">
+    <ion-card>
+      <img class="swiper-lazy" [src]="movie.backdrop_path | image" />
+    </ion-card>
+  </ng-template>
+</swiper>

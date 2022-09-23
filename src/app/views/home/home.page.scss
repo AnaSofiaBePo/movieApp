@@ -1,11 +1,13 @@
-.swiper {
-    width: 100%;
-  }
 
-  ion-card{
-    background: none;
-  }
-  
-  img {
-    border-radius: 8px;
-  }
+
+h3 {
+  display: flex;
+  align-items: center;
+  color: #ccc516;
+  font-weight: 600;
+}
+
+ion-icon.popular-heart {
+  margin-left: 0.5rem;
+  color: var(--ion-color-danger-shade);
+}

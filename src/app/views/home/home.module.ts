@@ -9,6 +9,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { SwiperModule } from 'swiper/angular';
 import { PipesModule } from 'src/app/pipes/pipes.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
     IonicModule,
     HomePageRoutingModule,
     PipesModule,
-    SwiperModule
+    SwiperModule,
+    ComponentsModule
   ],
   declarations: [HomePage]
 })
