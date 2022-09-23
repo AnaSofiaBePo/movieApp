@@ -28,20 +28,19 @@ export class SlidesShowBackdropComponent implements OnInit {
     spaceBetween: 0.5,
     freeMode: true,
     resizeObserver: true,
-    breakpoints:{
-      340:{
-           slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 0,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 0,
-          },
-   }
-
+    breakpoints: {
+      340: {
+        slidesPerView: 2.3,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 0,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 0,
+      },
+    },
   };
 
   constructor() {}

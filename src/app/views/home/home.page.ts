@@ -35,14 +35,12 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.movieServices.getFeatures().subscribe((res) => {
       this.recentMovies = res.results;
-      console.log(res);
 
       this.movieServices.getPopular().subscribe((popular) => {
         this.popularis = popular.results;
       });
 
       this.movieServices.getPopular().subscribe((trend) => {
-        console.log('trend', trend.results);
         this.trending = trend.results;
       });
     });
