@@ -38,9 +38,7 @@ export class HomePage implements OnInit {
       this.recentMovies = res.results;
     });
 
-    this.movieServices.getPopular().subscribe((popular) => {
-      this.popularis = popular.results;
-    });
+    this.getPopulars();
 
     this.movieServices.getTrending().subscribe((trend) => {
       this.trending = trend.results;
@@ -48,6 +46,16 @@ export class HomePage implements OnInit {
 
     this.movieServices.getUpcoming().subscribe((upcoming) => {
       this.upcoming = upcoming.results;
+    });
+  }
+
+  loadMore(){
+    this.getPopulars();
+  }
+
+  getPopulars(){
+    this.movieServices.getPopular().subscribe((popular) => {
+      this.popularis.push(...popular.results);
     });
   }
 }

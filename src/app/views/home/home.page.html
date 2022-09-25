@@ -26,7 +26,7 @@
     </ion-row>
   </ion-grid>
 
-  <app-show-peers [popularMovies]="popularis" ></app-show-peers>
+  <app-show-peers (loadMore)="loadMore()" [popularMovies]="popularis"></app-show-peers>
 
   <ion-grid fixed>
     <ion-row>

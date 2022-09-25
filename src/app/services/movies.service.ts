@@ -11,24 +11,26 @@ const apiKey = environment.apiKey;
   providedIn: 'root',
 })
 export class MoviesService {
+  private popularsPage = 0;
   constructor(private http: HttpClient) {}
 
   private executeQuery<T>(query: string) {
     query = URL + query;
-    query += `api_key=${apiKey}`;
+    query += `&api_key=${apiKey}`;
     return this.http.get<T>(query);
   }
 
   getPopular() {
+    this.popularsPage++;
 
-    const query = '/movie/popular?';
+    const query = `/movie/popular?&page=${this.popularsPage}`;
 
     return this.executeQuery<responseMDB>(query);
   }
 
   getTrending() {
 
-    const query = '/trending/all/day?';
+    const query = '/trending/all/week?';
 
     return this.executeQuery<responseMDB>(query);
   }

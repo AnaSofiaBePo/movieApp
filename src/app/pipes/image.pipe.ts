@@ -5,6 +5,7 @@ const URL = environment.imgPath;
 
 @Pipe({
   name: 'image',
+  pure: false
 })
 export class ImagePipe implements PipeTransform {
   transform(img: string, size: string = 'w500'): string {

@@ -1,10 +1,20 @@
-
-
-      <swiper class="grid-peers" [config]="config">
-        <ng-template swiperSlide *ngFor="let movie of popularMovies">
-          <ion-card>
-            <img class="swiper-lazy poster" [src]="movie.poster_path | image" />
-          </ion-card>
+<swiper
+*ngIf="popularMovies.length>1"
+  (swiper)="onSwiper($event)"
+  (slidesLengthChange)="lengthChange()"
+  class="grid-peers"
+  [config]="config"
+>
+  <ng-template swiperSlide *ngFor="let movie of popularMovies; let i = index">
+    <div>
+      <ion-card>
+        <img class="swiper-lazy poster" [src]="movie.poster_path | image" />
+      </ion-card>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+            <ion-button (click)="load()">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
         </ng-template>
-      </swiper>
- 
+</swiper>
